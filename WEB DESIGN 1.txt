@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date to day Tool</title>
+  <script>
+    function getDateday() {
+      var inputDate = document.getElementById("inputDate").value;
+      var date = new Date(inputDate);
+      var options = { weekday: 'long' };
+      var weekday = date.toLocaleDateString(undefined, options);
+      document.getElementById("result").innerHTML = "The weekday is: " + weekday;
+    }
+  </script>
+</head>
+<body>
+  <h1>Date to Weekday Tool</h1>
+  <label for="inputDate">Enter a date:</label>
+  <input type="date" id="inputDate">
+  <button onclick="getDateWeekday()">Get Weekday</button>
+  <p id="result"></p>
+</body>
+</html>
